@@ -1,0 +1,34 @@
+body {
+  background: #a7a7a7;
+}
+
+.container {
+  background: white;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
+.container div {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 8px;
+  min-width: 300px;
+  width: 22%;
+  flex-grow: 1;
+}
+
+.orange {
+  background: #ffcd70;
+  border: solid 1px #ff4400;
+}
+
+.blue {
+  background: #6adaff;
+  border: solid 1px #0048ff;
+}
+/*# sourceMappingURL=main.css.map */
