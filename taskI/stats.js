@@ -60,53 +60,53 @@ const getAverage = (series, apd = false) => {
 
     for (let i = 0; i < series.length; i++) {
 
-      switch (oneWeek[i].date.toLocaleDateString("en-US", options)) {
+      switch (series[i].date.toLocaleDateString("en-US", options)) {
         case 'Monday':
-          averagePerDay.Monday.averageVisits += oneWeek[i].visits;
-          if (mondays.dates.includes(oneWeek[i].date.toDateString("en-US")) == false) {
-            mondays.dates.push(oneWeek[i].date.toDateString("en-US"));
+          averagePerDay.Monday.averageVisits += series[i].visits;
+          if (mondays.dates.includes(series[i].date.toDateString("en-US")) == false) {
+            mondays.dates.push(series[i].date.toDateString("en-US"));
             mondays.days++;
           };
           break;
         case 'Tuesday':
-          averagePerDay.Tuesday.averageVisits += oneWeek[i].visits;
-          if (tuesdays.dates.includes(oneWeek[i].date.toDateString("en-US")) == false) {
-            tuesdays.dates.push(oneWeek[i].date.toDateString("en-US"));
+          averagePerDay.Tuesday.averageVisits += series[i].visits;
+          if (tuesdays.dates.includes(series[i].date.toDateString("en-US")) == false) {
+            tuesdays.dates.push(series[i].date.toDateString("en-US"));
             tuesdays.days++;
           };
           break;
         case 'Wednesday':
-          averagePerDay.Wednesday.averageVisits += oneWeek[i].visits;
-          if (wednesdays.dates.includes(oneWeek[i].date.toDateString("en-US")) == false) {
-            wednesdays.dates.push(oneWeek[i].date.toDateString("en-US"));
+          averagePerDay.Wednesday.averageVisits += series[i].visits;
+          if (wednesdays.dates.includes(series[i].date.toDateString("en-US")) == false) {
+            wednesdays.dates.push(series[i].date.toDateString("en-US"));
             wednesdays.days++;
           };
           break;
         case 'Thursday':
-          averagePerDay.Thursday.averageVisits += oneWeek[i].visits;
-          if (thursdays.dates.includes(oneWeek[i].date.toDateString("en-US")) == false) {
-            thursdays.dates.push(oneWeek[i].date.toDateString("en-US"));
+          averagePerDay.Thursday.averageVisits += series[i].visits;
+          if (thursdays.dates.includes(series[i].date.toDateString("en-US")) == false) {
+            thursdays.dates.push(series[i].date.toDateString("en-US"));
             thursdays.days++;
           };
           break;
         case 'Friday':
-          averagePerDay.Friday.averageVisits += oneWeek[i].visits;
-          if (fridays.dates.includes(oneWeek[i].date.toDateString("en-US")) == false) {
-            fridays.dates.push(oneWeek[i].date.toDateString("en-US"));
+          averagePerDay.Friday.averageVisits += series[i].visits;
+          if (fridays.dates.includes(series[i].date.toDateString("en-US")) == false) {
+            fridays.dates.push(series[i].date.toDateString("en-US"));
             fridays.days++;
           };
           break;
         case 'Saturday':
-          averagePerDay.Saturday.averageVisits += oneWeek[i].visits;
-          if (saturdays.dates.includes(oneWeek[i].date.toDateString("en-US")) == false) {
-            saturdays.dates.push(oneWeek[i].date.toDateString("en-US"));
+          averagePerDay.Saturday.averageVisits += series[i].visits;
+          if (saturdays.dates.includes(series[i].date.toDateString("en-US")) == false) {
+            saturdays.dates.push(series[i].date.toDateString("en-US"));
             saturdays.days++;
           };
           break;
         case 'Sunday':
-          averagePerDay.Sunday.averageVisits += oneWeek[i].visits;
-          if (sundays.dates.includes(oneWeek[i].date.toDateString("en-US")) == false) {
-            sundays.dates.push(oneWeek[i].date.toDateString("en-US"));
+          averagePerDay.Sunday.averageVisits += series[i].visits;
+          if (sundays.dates.includes(series[i].date.toDateString("en-US")) == false) {
+            sundays.dates.push(series[i].date.toDateString("en-US"));
             sundays.days++;
           };
           break;
@@ -130,8 +130,8 @@ const getAverage = (series, apd = false) => {
     };
     for (let i = 0; i < series.length; i++) {
       sum += series[i].visits;
-      if (serie.dates.includes(oneWeek[i].date.toDateString("en-US")) == false) {
-        serie.dates.push(oneWeek[i].date.toDateString("en-US"));
+      if (serie.dates.includes(series[i].date.toDateString("en-US")) == false) {
+        serie.dates.push(series[i].date.toDateString("en-US"));
         serie.days++;
       }
     }
