@@ -1,5 +1,5 @@
-const getAverage =  (series1, apw = false) => {
-    if (apw == false) {
+const getAverage =  (series1, apd = false) => {
+    if (apd == false) {
         return {
             'averageVisits': Math.round(series1.reduce((ret, serieItem) => {
                 return ret + serieItem.visits;
